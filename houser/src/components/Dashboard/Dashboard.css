@@ -1,3 +1,14 @@
 .dashboard {
-  background-color: royalblue;
+}
+
+.dashboard > h3 {
+  margin: 20px;
+}
+
+.houses-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
 }

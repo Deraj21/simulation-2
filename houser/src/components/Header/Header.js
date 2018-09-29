@@ -5,7 +5,8 @@ export default function Header(props) {
 
   return (
     <div className="header">
-      Header
+      <div className="houser-logo" />
+      <h2>Houser</h2>
     </div>
   );
 }

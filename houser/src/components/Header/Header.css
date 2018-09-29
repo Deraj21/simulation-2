@@ -1,3 +1,21 @@
 .header {
-  background-color: chartreuse;
+  background-color: #519872;
+  padding: 20px;
+  position: fixed;
+  width: 100vw;
+}
+
+.header > h2 {
+  display: inline-block;
+  color: white;
+}
+
+.houser-logo {
+  display: inline-block;
+  width: 35px;
+  height: 28px;
+  background-image: url('../../resources/houser_logo.png');
+  background-repeat: no-repeat;
+  margin-left: 400px;
+  margin-right: 10px;
 }

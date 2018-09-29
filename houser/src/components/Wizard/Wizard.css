@@ -1,3 +1,26 @@
-.wizard {
-  background-color: mediumvioletred;
+input {
+  margin-bottom: 20px;
+  border: 1px solid #519872;
+  border-radius: 2px;
+  padding: 3px;
+  margin-top: 5px;
+}
+
+.wizard h3 {
+  margin-left: 10px;
+}
+
+.form {
+  padding-top: 50px;
+  padding-left: 80px;
+}
+
+.bottom-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+}
+
+.bottom-inputs > div {
+  margin-right: 20px;
 }
