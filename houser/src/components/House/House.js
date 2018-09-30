@@ -1,7 +1,7 @@
 import React from 'react';
 import './House.css';
 
-export default function House(house_id, image_url, property_name, address, city, state, zipcode, monthy_morgage, desired_rent) {
+export default function House(house_id, image_url, property_name, address, city, state, zipcode, monthy_morgage, desired_rent, deleteHouse, editHouse) {
 
   return (
     <div className="house">
@@ -12,7 +12,7 @@ export default function House(house_id, image_url, property_name, address, city,
         <p>State: {state}</p>
         <p>Zip: {zipcode}</p>
       </div>
-      <div className="delete-btn" />
+      <div onClick={() => deleteHouse(house_id)} className="delete-btn" />
     </div>
   );
 }
