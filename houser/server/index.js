@@ -18,5 +18,13 @@ massive(CONNECTION_STRING)
     console.log(`dbErr: ${err.message}`);
   } );
 
+// endpoints - houses
+app.get('/api/houses', controller.getHouses);
+app.get('/api/house/:id', controller.getHouse);
+app.post('/api/house', controller.createHouse);
+app.put('/api/house/:id', controller.editHouse);
+app.delete('/api/house/:id', controller.deleteHouse);
+
+
 const port = PORT || 4000;
 app.listen(port, console.log(`Server listening on port ${port}`));
