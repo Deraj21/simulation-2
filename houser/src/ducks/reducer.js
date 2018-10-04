@@ -18,7 +18,8 @@ const UPDATE_HOUSES = "UPDATE_HOUSES",
       UPDATE_STATE = "UPDATE_STATE",
       UPDATE_ZIP = "UPDATE_ZIP",
       UPDATE_MORGAGE = "UPDATE_MORGAGE",
-      UPDATE_RENT = "UPDATE_RENT";
+      UPDATE_RENT = "UPDATE_RENT",
+      RESET_WIZARD_DATA = "RESET_WIZARD_DATA";
 
 export default function reducer(state = initialState, action){
   let { type, payload } = action;
@@ -41,6 +42,8 @@ export default function reducer(state = initialState, action){
       return { ...state, morgage: payload };
     case UPDATE_RENT:
       return { ...state, rent: payload };
+    case RESET_WIZARD_DATA:
+      return { ...state, image_url: '', name: '', address: '', city: '', state: '', zipcode: 0, morgage: 0, rent: 0 };
     default:
       return state;
   }
@@ -106,5 +109,11 @@ export function updateRent(rent){
   return {
     type: UPDATE_RENT,
     payload: rent
+  }
+}
+
+export function resetWizardData(){
+  return {
+    type: RESET_WIZARD_DATA
   }
 }

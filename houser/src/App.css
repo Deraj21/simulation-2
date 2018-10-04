@@ -54,6 +54,11 @@ button {
   background-color: #8AEA92;
 }
 
+.darkgreen {
+  background-color: #3B5249;
+  color: white;
+}
+
 .pink {
   background-color: #FEC2C2;
 }
