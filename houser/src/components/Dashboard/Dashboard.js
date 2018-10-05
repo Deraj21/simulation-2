@@ -4,7 +4,7 @@ import House from '../House/House';
 import { Link } from 'react-router-dom';
 import Axios from 'axios';
 import { connect } from 'react-redux';
-import { updateHouses } from '../../ducks/reducer';
+import { updateHouses, resetWizardData } from '../../ducks/reducer';
 
 class Dashboard extends Component {
   constructor(props){
@@ -19,6 +19,7 @@ class Dashboard extends Component {
   }
 
   componentDidMount(){
+    this.props.resetWizardData();
     Axios.get('/api/houses')
       .then( response => {
         this.props.updateHouses(response.data);
@@ -73,4 +74,4 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps, { updateHouses })(Dashboard);
+export default connect(mapStateToProps, { updateHouses, resetWizardData })(Dashboard);

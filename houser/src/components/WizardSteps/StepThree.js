@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Axios from 'axios';
-import { updateHouses, updateMorgage, updateRent, resetWizardData } from '../../ducks/reducer';
+import { updateHouses, updateMorgage, updateRent } from '../../ducks/reducer';
 
 function StepThree(props){
 
@@ -13,7 +13,6 @@ function StepThree(props){
     Axios.post('/api/house', { image_url, property_name: name, address, city, state, zipcode, monthly_morgage: morgage, desired_rent: rent })
       .then(response => {
         this.props.updateHouses(response.data);
-        this.props.resetWizardData();
       })
       .catch(err => console.log(err.message));
   }
@@ -49,4 +48,4 @@ function mapStateToProps(reduxState){
   };
 }
 
-export default connect(mapStateToProps, { updateHouses, updateMorgage, updateRent, resetWizardData })(StepThree);
+export default connect(mapStateToProps, { updateHouses, updateMorgage, updateRent })(StepThree);

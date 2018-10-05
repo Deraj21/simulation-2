@@ -43,6 +43,7 @@ export default function reducer(state = initialState, action){
     case UPDATE_RENT:
       return { ...state, rent: payload };
     case RESET_WIZARD_DATA:
+      console.log('reseting wizard data...');
       return { ...state, image_url: '', name: '', address: '', city: '', state: '', zipcode: 0, morgage: 0, rent: 0 };
     default:
       return state;
