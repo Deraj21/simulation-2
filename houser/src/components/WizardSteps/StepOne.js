@@ -5,7 +5,8 @@ import { updateName, updateAddress, updateCity, updateState, updateZip } from '.
 
 function StepOne(props){
 
-  let { name, address, city, state, zip } = props;
+  let { name, address, city, state, zipcode } = props;
+  console.log(`name: ${name}, address: ${address}, city: ${city}, state: ${state}, zip: ${zipcode}`);
 
   return (
     <div className="step-one step">
@@ -25,7 +26,7 @@ function StepOne(props){
         </div>
         <div>
           <h3>Zip</h3>
-          <input onChange={e => props.updateZip(e.target.value)} value={zip} maxLength="5" type="number" />
+          <input onChange={e => props.updateZip(e.target.value) } value={zipcode} type="number" />
         </div>
       </div>
 

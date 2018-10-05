@@ -1,3 +1,4 @@
+
 .house {
   background-color: #DEDEDE;
   padding: 10px;
@@ -5,7 +6,11 @@
   line-height: 175%;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-start;
+}
+
+.house > img {
+  height: 150px;
 }
 
 .delete-btn {

@@ -45,9 +45,9 @@ class Dashboard extends Component {
   render() {
     let { housesData } = this.props;
     let houses = housesData.map(house => {
-      let { house_id, image_url, property_name, address, city, state, zipcode, monthy_morgage, desired_rent } = house;
+      let { house_id, image_url, property_name, address, city, state, zipcode, monthly_morgage, desired_rent } = house;
 
-      return House(house_id, image_url, property_name, address, city, state, zipcode, monthy_morgage, desired_rent, this.deleteHouse, this.editHouse);
+      return House(house_id, image_url, property_name, address, city, state, zipcode, monthly_morgage, desired_rent, this.deleteHouse);
     });
 
     return (

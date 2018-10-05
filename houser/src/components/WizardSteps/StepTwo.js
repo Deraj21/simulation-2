@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 function StepTwo(props){
 
   let { image_url } = props;
+  console.log(`image_url: ${image_url}`);
 
   return (
     <div className="step-two step">

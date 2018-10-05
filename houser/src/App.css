@@ -37,6 +37,7 @@ button {
   padding-top: 95px;
   background-color: #E5F4EC;
   width: 50%;
+  min-width: 650px;
   margin: auto;
   box-sizing: border-box;
   padding-left: 20px;

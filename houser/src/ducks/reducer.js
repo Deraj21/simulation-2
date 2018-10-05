@@ -5,9 +5,9 @@ let initialState = {
   address: '',
   city: '',
   state: '',
-  zipcode: 0,
-  morgage: 0,
-  rent: 0
+  zipcode: null,
+  morgage: null,
+  rent: null
 };
 
 const UPDATE_HOUSES = "UPDATE_HOUSES",
@@ -29,7 +29,7 @@ export default function reducer(state = initialState, action){
     case UPDATE_IMAGE_URL:
       return { ...state, image_url: payload };
     case UPDATE_NAME:
-      return { ...state, name: payload };
+      return Object.assign({}, state, { name: payload });
     case UPDATE_ADDRESS:
       return { ...state, address: payload };
     case UPDATE_CITY:
@@ -37,7 +37,7 @@ export default function reducer(state = initialState, action){
     case UPDATE_STATE:
       return { ...state, state: payload };
     case UPDATE_ZIP:
-      return { ...state, zip: payload };
+      return { ...state, zipcode: payload };
     case UPDATE_MORGAGE:
       return { ...state, morgage: payload };
     case UPDATE_RENT:
