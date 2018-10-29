@@ -7,7 +7,8 @@ let initialState = {
   state: '',
   zipcode: null,
   morgage: null,
-  rent: null
+  rent: null,
+  suggestedRent: 0
 };
 
 const UPDATE_HOUSES = "UPDATE_HOUSES",
@@ -19,6 +20,7 @@ const UPDATE_HOUSES = "UPDATE_HOUSES",
       UPDATE_ZIP = "UPDATE_ZIP",
       UPDATE_MORGAGE = "UPDATE_MORGAGE",
       UPDATE_RENT = "UPDATE_RENT",
+      UPDATE_SUGGESTED_RENT = "UPDATE_SUGGESTED_RENT",
       RESET_WIZARD_DATA = "RESET_WIZARD_DATA";
 
 export default function reducer(state = initialState, action){
@@ -42,6 +44,8 @@ export default function reducer(state = initialState, action){
       return { ...state, morgage: payload };
     case UPDATE_RENT:
       return { ...state, rent: payload };
+    case UPDATE_SUGGESTED_RENT:
+      return { ...state, suggestedRent: payload };
     case RESET_WIZARD_DATA:
       console.log('reseting wizard data...');
       return { ...state, image_url: '', name: '', address: '', city: '', state: '', zipcode: 0, morgage: 0, rent: 0 };
@@ -110,6 +114,13 @@ export function updateRent(rent){
   return {
     type: UPDATE_RENT,
     payload: rent
+  }
+}
+
+export function updateSuggestedRent(suggestedRent){
+  return {
+    type: UPDATE_SUGGESTED_RENT,
+    payload: suggestedRent
   }
 }
 

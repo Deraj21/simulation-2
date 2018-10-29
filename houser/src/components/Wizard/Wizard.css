@@ -10,6 +10,13 @@ input {
   margin-left: 10px;
 }
 
+.wizard h4 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 .step {
   padding: 50px 80px;
 }
